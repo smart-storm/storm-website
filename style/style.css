@@ -18,7 +18,7 @@ img
 { border: 0;}
 
 h1, h2, h3, h4, h5, h6 
-{ font: normal 165% 'century gothic', arial, sans-serif;
+{ font: normal 32px 'century gothic', arial, sans-serif;
   color: #2DB8CD;
   margin: 0 0 14px 0;
   padding: 10px 0 5px 0;}
@@ -161,6 +161,8 @@ ul#menu li a:hover
 
 #site_content
 { width: 858px;
+  display: flex;
+  flex-direction: row;
   overflow: hidden;
   margin: 0 auto 0 auto;
   padding: 10px 20px 20px 20px;
@@ -192,8 +194,10 @@ ul#menu li a:hover
 
 #content
 { text-align: left;
-  width: 613px;
-  padding: 0;}
+  width: 628px;
+  padding: 0;
+}
+
 
 #footer
 { width: 916px;
@@ -288,3 +292,110 @@ table tr td
 { background: #E5E5DB;
   color: #47433F;
   border-top: 1px solid #FFF;}
+
+.arrow {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-right: black solid 2px;
+  border-bottom: black solid 2px;
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.arrow-up {
+  transform: rotate(225deg);
+}
+
+.menu-toggler span {
+  margin-right: 20px;
+}
+
+
+.menu-toggler {
+  display: none;
+  width: 100%;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: #F6F6F0;
+  text-decoration: none;
+  color: #000000 !important;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  body {
+
+  }
+
+  #header {
+    position: relative;
+    width: 100%;
+  }
+
+  #header #logo {
+    width: 100%;
+  }
+
+  #header #menubar {
+    width: 100%;
+    text-align: center;
+  }
+
+  ul#menu {
+    width: 100%;
+    position: relative;
+    display: none;
+  }
+
+  ul#menu li {
+    width: 100%;
+    display: block;
+  }
+
+  ul#menu li a {
+    width: 100%;
+    padding: 0;
+    height: auto;
+    line-height: 30px;
+  }
+
+
+  #site_content {
+    width: 96%;
+    padding: 0 2% 0 2%;
+    background: none;
+    display: block;
+    border: none;
+  }
+
+  .sidebar {
+    float: left;
+    width: 96%;
+    padding: 0 2% 20px 2%;
+    display: block;
+    position: relative;
+  }
+
+  p {
+    display: block;
+    width: auto;
+    overflow: scroll;
+  }
+  
+  #content {
+    clear: both;
+    width: 100%;
+  }
+
+  .menu-toggler {
+    display: inline-block;
+
+  }
+
+  #footer {
+    width: 100%;
+  }
+}
